@@ -1,5 +1,5 @@
  body{
-      background-color: rgba(0, 0, 0, 0.623);
+      background-color: rgba(206, 158, 191, 0.623);
     }
     .form-group label {
       display: block;
@@ -15,19 +15,21 @@
     }
 
     .submit-button {
+      background-color: #f3adea;
       padding: 10px 50px;
       border-radius: 15px;
-      transition: background-color 0.3s ease;
+      margin: 0 auto;
+      width: 100%;
     }
 
     .submit-button:hover {
-      background-color: #2563eb;
-      /* Un azul más oscuro al pasar el mouse */
+      background-color: #eb9af0;
+      /* Un color más oscuro al pasar el mouse */
     }
     .menu {
       background-color: #fb77da;
       overflow: hidden;
-      margin: 50px 0;
+      margin: 10px 0 20px 0;
     }
 
     .menu ul {
@@ -56,10 +58,34 @@
       border-bottom: 4px solid rgb(249, 175, 238);
     }
     #form-section {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: #f9dbf8;
       padding: 20px;
+      border-radius: 5px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    
+    #video-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+       }
+    #video-section iframe {
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      margin: auto;
+     max-width: 540%;
+    } 
+    footer {
+      background-color: #fb77da;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: 30px !important;
+    }
+    footer p {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    footer a {
+      color: rgb(165, 4, 143);
+      text-decoration: none;
     }
