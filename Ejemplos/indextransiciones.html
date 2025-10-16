@@ -6,17 +6,16 @@
   <title>Investigación CSS</title>
 
   <style>
-    /* --- Estilo del cuerpo de la página --- */
     body {
-      background-color: #68b4ee; 
+      background-color: #e2d9e8; 
       text-align: center;        
       font-family: Arial, sans-serif;
       padding-top: 80px;     
     }
 
-    /* --- Estilos generales para todos los botones --- */
+    /*  Estilos generales para todos los botones  */
     button {
-      color: rgb(248, 244, 244);               
+      color: rgb(235, 231, 231);               
       border: none;              
       padding: 15px 30px;        
       border-radius: 8px;         
@@ -25,18 +24,18 @@
       cursor: pointer;           
     }
 
-    /* --- BOTÓN 1: SOMBRAS (box-shadow y text-shadow) --- */
+    /*  BOTÓN 1: SOMBRAS */
     .sombra {
       background-color: #7b86e9; 
-      box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+      box-shadow: 5px 5px 15px rgba(11, 10, 10, 0.3); 
       text-shadow: 2px 2px 4px rgba(0,0,0,0.4); 
     }
 
     .sombra:hover {
-      box-shadow: 8px 8px 25px rgba(3, 3, 19, 0.5); 
+      box-shadow: 8px 8px 25px rgba(14, 14, 15, 0.5); 
     }
 
-    /* --- BOTÓN 2: TRANSICIÓN (color y tamaño suaves) --- */
+    /* BOTÓN 2: TRANSICIÓN  */
     .transicion {
       background-color: #257243;
       transition-property: background-color, transform; /* Qué propiedades cambian */
@@ -49,14 +48,12 @@
       background-color: #4dbd0c; 
       transform: scale(1.1);     /* Aumenta un poco el tamaño */
     }
-
+    
     /* --- BOTÓN 3: ANIMACIÓN --- */
     .animacion {
       background-color: #20b2aa;
       animation: mover 2s infinite alternate; /* Aplica la animación */
     }
-
-    /* --- Definición de la animación --- */
     @keyframes mover {
       0% { transform: translateY(0); }      /* Posición inicial */
       100% { transform: translateY(-20px);} /* Se mueve hacia arriba */
