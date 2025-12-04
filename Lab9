@@ -39,6 +39,10 @@
          style="width:100px;height:100px;background-color:#3498db;color:#fff;text-align:center;line-height:100px;cursor:move;">
         Arrástrame
     </div>
+    <div id="drag1" draggable="true" ondragstart="drag(event)"
+         style="width:100px;height:100px;background-color:#6edb34;color:#fff;text-align:center;line-height:100px;cursor:move;">
+        Arrástrame
+    </div>
     <div id="drop1" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">Caja 1</div>
     <div id="drop2" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">Caja 2</div>
 
