@@ -1,343 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>II-51 Laboratorios</title>
+    <title>Mis Labs</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f7fa;
+            font-family: Arial;
+            margin: 40px;
+            background: #f0f0f0;
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 30px 0;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
+        
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .lab-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-left: 5px solid #6a11cb;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .lab-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .lab-card h2 {
             color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .lab-card p {
-            color: #666;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .lab-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
             text-align: center;
-            margin-top: auto;
         }
-
-        .lab-link:hover {
-            background: linear-gradient(135deg, #5a0db5 0%, #1c68e8 100%);
-            transform: scale(1.05);
-        }
-
-        .lab-link::after {
-            content: " →";
-            opacity: 0.8;
-        }
-
-        .coming-soon {
-            background: #f8f9fa;
-            border-left-color: #95a5a6;
-            opacity: 0.8;
-        }
-
-        .coming-soon h2::before {
-            content: "⏳";
-        }
-
-        .coming-soon .lab-link {
-            background: #95a5a6;
-            cursor: not-allowed;
-        }
-
-        .coming-soon .lab-link:hover {
-            background: #7f8c8d;
-            transform: none;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
+        
+        .lab {
+            background: white;
             padding: 20px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-        }
-
-        .search-bar {
-            margin: 30px 0;
-            text-align: center;
-        }
-
-        .search-bar input {
-            width: 100%;
-            max-width: 500px;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            border: 2px solid #ddd;
+            margin: 15px;
             border-radius: 8px;
-            outline: none;
-            transition: border-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .search-bar input:focus {
-            border-color: #6a11cb;
-        }
-
-        .status-badge {
+        
+        .boton {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-
-        .status-completed {
-            background: #2ecc71;
+            padding: 10px 20px;
+            margin: 5px;
             color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
         }
-
-        .status-in-progress {
-            background: #f39c12;
-            color: white;
-        }
-
-        .status-planned {
-            background: #3498db;
-            color: white;
-        }
-
-        .empty-state {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 50px;
-            color: #7f8c8d;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-        }
+        
+        .azul { background: #3498db; }
+        .azul:hover { background: #2980b9; }
+        
+        .verde { background: #2ecc71; }
+        .verde:hover { background: #27ae60; }
+        
+        .rojo { background: #e74c3c; }
+        .rojo:hover { background: #c0392b; }
+        
+        .morado { background: #9b59b6; }
+        .morado:hover { background: #8e44ad; }
+        
+        .naranja { background: #e67e22; }
+        .naranja:hover { background: #d35400; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Laboratorios II-51</h1>
-        <p class="subtitle">Explora todos los proyectos y laboratorios del curso</p>
-    </header>
-
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar laboratorios por nombre o descripción...">
-    </div>
-
-    <div class="container" id="labsContainer">
-        <!-- Los laboratorios se insertarán aquí dinámicamente -->
-    </div>
-
-    <footer>
-
-    </footer>
-
-    <script>
+    <h1>📁 MIS LABORATORIOS</h1>
     
-        const labs = [
-            {
-                id: 1,
-                title: "Laboratorio 1",
-                description: "Introducción al desarrollo web con HTML y CSS. Creación de una página web básica con elementos semánticos.",
-                link: "./Lab1/index.html",
-                status: "completed"
-            },
-            {
-                id: 2,
-                title: "Laboratorio 2",
-                description: "JavaScript básico - Manipulación del DOM, eventos y funciones. Implementación de interactividad en una página web.",
-                link: "./lab2/index.html",
-                status: "completed"
-            },
-            {
-                id: 3,
-                title: "Laboratorio 3",
-                description: "Vite y React - Configuración de un proyecto moderno con Vite y creación de componentes React básicos.",
-                link: "./lab3/",
-                status: "in-progress"
-            },
-            {
-                id: 4,
-                title: "Laboratorio 4",
-                description: "API REST y Fetch - Consumo de APIs externas y manejo de respuestas asíncronas.",
-                link: "#",
-                status: "planned"
-            },
-            {
-                id: 5,
-                title: "Laboratorio 5",
-                description: "Base de datos local - Implementación de IndexedDB o localStorage para persistencia de datos.",
-                link: "#",
-                status: "planned"
-            },
-            {
-                id: 6,
-                title: "Proyecto Final",
-                description: "Aplicación web completa integrando todos los conceptos aprendidos durante el curso.",
-                link: "#",
-                status: "planned"
-            }
-        ];
-
-        // Función para renderizar los laboratorios
-        function renderLabs(labsToRender) {
-            const container = document.getElementById('labsContainer');
-            
-            if (labsToRender.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <h2>No se encontraron laboratorios</h2>
-                        <p>Intenta con otros términos de búsqueda</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = labsToRender.map(lab => {
-                const statusText = {
-                    'completed': 'Completado',
-                    'in-progress': 'En Progreso',
-                    'planned': 'Planeado'
-                };
-
-                const isComingSoon = lab.link === '#';
-                
-                return `
-                    <div class="lab-card ${isComingSoon ? 'coming-soon' : ''}">
-                        <h2>
-                            ${lab.title}
-                            <span class="status-badge status-${lab.status}">
-                                ${statusText[lab.status]}
-                            </span>
-                        </h2>
-                        <p>${lab.description}</p>
-                        <a href="${lab.link}" 
-                           class="lab-link" 
-                           ${isComingSoon ? 'onclick="return false;"' : ''}>
-                            ${isComingSoon ? 'Próximamente' : 'Ver Laboratorio'}
-                        </a>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        // Función de búsqueda
-        function searchLabs() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filteredLabs = labs.filter(lab => 
-                lab.title.toLowerCase().includes(searchTerm) ||
-                lab.description.toLowerCase().includes(searchTerm)
-            );
-            renderLabs(filteredLabs);
-        }
-
-        // Inicialización
-        document.addEventListener('DOMContentLoaded', () => {
-            // Renderizar laboratorios iniciales
-            renderLabs(labs);
-            
-            // Configurar búsqueda
-            document.getElementById('searchInput').addEventListener('input', searchLabs);
-            
-            // Mostrar fecha actual
-            const currentDate = new Date().toLocaleDateString('es-ES', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            document.getElementById('currentDate').textContent = currentDate;
-            
-            // Añadir mensaje de consola para desarrolladores
-            console.log('Índice de Laboratorios II-51 cargado correctamente');
-            console.log('Laboratorios disponibles:', labs.length);
-        });
-
-        // Añadir efecto de teclado para búsqueda
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === '/') {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-        });
-    </script>
+    <div class="lab">
+        <h2>Lab 1: HTML Básico</h2>
+        <p>Primera página web con HTML</p>
+        <a href="lab1/index.html" class="boton azul">Abrir Lab 1</a>
+    </div>
+    
+    <div class="lab">
+        <h2>Lab 2: CSS</h2>
+        <p>Estilos y colores</p>
+        <a href="lab2/index.html" class="boton verde">Abrir Lab 2</a>
+    </div>
+    
+    <div class="lab">
+        <h2>Lab 3: JavaScript</h2>
+        <p>Programación básica</p>
+        <a href="lab3/index.html" class="boton rojo">Abrir Lab 3</a>
+    </div>
+    
+    <div class="lab">
+        <h2>Lab 4: Vite</h2>
+        <p>Configuración con Vite</p>
+        <a href="Lab4/index.html" class="boton morado">Abrir Lab 4</a>
+    </div>
+    
+    <div class="lab">
+        <h2>Lab 5: API</h2>
+        <p>Conexión con APIs</p>
+        <a href="lab5/index.html" class="boton naranja">Abrir Lab 5</a>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="#" class="boton azul" onclick="alert('Página principal')">Inicio</a>
+        <a href="#" class="boton verde" onclick="alert('Todos los labs cargados')">Recargar</a>
+    </div>
 </body>
 </html>
