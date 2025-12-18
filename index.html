@@ -5,103 +5,71 @@
     <style>
         body {
             font-family: Arial;
-            margin: 40px;
-            background: #f0f0f0;
-        }
-        
-        h1 {
-            color: #2c3e50;
+            margin: 20px;
+            background: #fff0f5;
             text-align: center;
         }
         
-        .lab {
-            background: white;
-            padding: 20px;
-            margin: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        h1 {
+            color: #ff69b4;
+            margin: 30px 0;
         }
         
-        .boton {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .boton-lab {
+            display: block;
+            width: 120px;
+            height: 120px;
+            margin: 10px;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 15px;
             border: none;
             cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .azul { background: #3498db; }
-        .azul:hover { background: #2980b9; }
+        .boton-lab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
         
-        .verde { background: #2ecc71; }
-        .verde:hover { background: #27ae60; }
-        
-        .rojo { background: #e74c3c; }
-        .rojo:hover { background: #c0392b; }
-        
-        .morado { background: #9b59b6; }
-        .morado:hover { background: #8e44ad; }
-        
-        .naranja { background: #e67e22; }
-        .naranja:hover { background: #d35400; }
+        .rosa1 { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+        .rosa2 { background: linear-gradient(45deg, #ffafbd, #ffc3a0); }
+        .lila1 { background: linear-gradient(45deg, #d4a5c3, #c9b6e4); }
+        .lila2 { background: linear-gradient(45deg, #c9b6e4, #e2c2ff); }
+        .coral { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+        .menta { background: linear-gradient(45deg, #a1c4fd, #c2e9fb); }
+        .lavanda { background: linear-gradient(45deg, #d4c1ec, #e2c2ff); }
+        .melon { background: linear-gradient(45deg, #ffd6e7, #ffc2d1); }
     </style>
 </head>
 <body>
-    <h1> MIS LABORATORIOS</h1>
+    <h1>MIS LABS </h1>
     
-    <div class="lab">
-        <h2>Lab 1: HTML Básico</h2>
-        <p>Primera página web con HTML</p>
-        <a href="Lab1/index.html" class="boton azul">Abrir Lab 1</a>
-    </div>
-    
-    <div class="lab">
-        <h2>Lab 2: CSS</h2>
-        <p>Estilos y colores</p>
-        <a href="Lab2/index.html" class="boton verde">Abrir Lab 2</a>
-    </div>
-    
-    <div class="lab">
-        <h2>Lab 3: JavaScript</h2>
-        <p>Programación básica</p>
-        <a href="Lab3/index.html" class="boton rojo">Abrir Lab 3</a>
-    </div>
-    
-    <div class="lab">
-        <h2>Lab 4: Vite</h2>
-        <p>Configuración con Vite</p>
-        <a href="Lab4/index.html" class="boton morado">Abrir Lab 4</a>
-    </div>
-    
-    <div class="lab">
-        <h2>Lab 5: API</h2>
-        <p>Conexión con APIs</p>
-        <a href="lab5/index.html" class="boton azul">Abrir Lab 5</a>
-    </div>
-     <div class="lab">
-        <h2>Lab 7: API</h2>
-        <p>Conexión con APIs</p>
-        <a href="Lab7/index.html" class="boton naranja">Abrir Lab 7</a>
-    </div>
-      </div>
-     <div class="lab">
-        <h2>Lab 9: API</h2>
-        <p>Conexión con APIs</p>
-        <a href="lab9/index.html" class="boton rojo">Abrir Lab 9</a>
-    </div>
-    <div class="lab">
-        <h2>Lab 10: API</h2>
-        <p>Conexión con APIs</p>
-        <a href="lab10/index.html" class="boton morado">Abrir Lab 10</a>
-    </div>
-    
-    
-    <div style="text-align: center; margin-top: 30px;">
-        <a href="#" class="boton azul" onclick="alert('Página principal')">Inicio</a>
-        <a href="#" class="boton verde" onclick="alert('Todos los labs cargados')">Recargar</a>
+    <div class="contenedor">
+        <a href="Lab1/index.html" class="boton-lab rosa1">LAB 1</a>
+        <a href="Lab2/index.html" class="boton-lab rosa2">LAB 2</a>
+        <a href="Lab3/index.html" class="boton-lab lila1">LAB 3</a>
+        <a href="Lab4/index.html" class="boton-lab lila2">LAB 4</a>
+        <a href="Lab5/index.html" class="boton-lab coral">LAB 5</a>
+        <a href="Lab7/index.html" class="boton-lab menta">LAB 7</a>
+        <a href="lab9/index.html" class="boton-lab lavanda">LAB 9</a>
+        <a href="lab10/index.html" class="boton-lab melon">LAB 10</a>
     </div>
 </body>
 </html>
